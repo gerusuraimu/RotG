@@ -1,4 +1,4 @@
-from RotG import Rotation
+from Rotation import MatrixRotation
 
 
 def printer(func):
@@ -14,7 +14,7 @@ def return_print(matrix):
 
 
 def demo():
-    rot = Rotation()
+    rot = MatrixRotation()
     matrix_2d = [[1, 2, 3],
                  [4, 5, 6],
                  [7, 8, 9]]

@@ -1,10 +1,10 @@
-class MatrixRotation:
+class RotationFunc:
     def rotation_left(self, matrix: list, repeat: int) -> list:
         repeat: int = repeat if repeat < 4 else repeat - (repeat // 4) * 4
         dimension: int = self.__get_dimension(matrix)
         if 1 < dimension:
             for _ in range(repeat):
-                matrix = [list(items) for items in zip(*list(map(reversed, matrix)))]
+                matrix = [list(items) for items in zip(*map(reversed, matrix))]
         return matrix
 
     def rotation_right(self, matrix: list, repeat: int) -> list:
@@ -24,7 +24,7 @@ class MatrixRotation:
             return n + 1
 
 
-class Rotation(MatrixRotation):
+class MatrixRotation(RotationFunc):
     def left(self, matrix: list, repeat: int) -> list: return self.rotation_left(matrix, repeat)
     def right(self, matrix: list, repeat: int) -> list: return self.rotation_right(matrix, repeat)
     def left90(self, matrix: list) -> list: return self.rotation_left(matrix, 1)

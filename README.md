@@ -10,7 +10,7 @@ from RotG import MatrixRotation as Rot
 
 
 def main():
-    rot = Rot()
+    rot = Rot()  # インスタンス化
     matrix = [[1, 2, 3],
               [4, 5, 6],
               [7, 8, 9]]

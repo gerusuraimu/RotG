@@ -1,4 +1,15 @@
 class RotationFunc:
+    def __repr__(self):
+        help_script = ('left(matrix: list, repeat: int) -> list ... 左にrepeatの回数だけ90度回転させる。\n'
+                       'right(matrix: list, repeat: int) -> list ... 右にrepeatの回数だけ90度回転させる。\n'
+                       'left90(matrix: list) -> list ... 左に90度回転させる。\n'
+                       'left180(matrix: list) -> list ... 左に180度回転させる。\n'
+                       'left270(matrix: list) -> list ... 左に270度回転させる。\n'
+                       'right90(matrix: list) -> list ... 右に90度回転させる。\n'
+                       'right180(matrix: list) -> list ... 右に180度回転させる。\n'
+                       'right270(matrix: list) -> list ... 右に270度回転させる。\n')
+        return help_script
+
     def rotation_left(self, matrix: list, repeat: int) -> list:
         repeat: int = repeat if repeat < 4 else repeat - (repeat // 4) * 4
         dimension: int = self.__get_dimension(matrix)

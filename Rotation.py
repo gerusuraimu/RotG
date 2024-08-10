@@ -11,7 +11,7 @@ class RotationFunc:
         return help_script
 
     def rotation_left(self, matrix: list, repeat: int) -> list:
-        repeat: int = repeat if repeat < 4 else repeat - (repeat // 4) * 4
+        repeat: int = repeat if repeat < 4 else repeat - repeat // 4 * 4
         dimension: int = self.__get_dimension(matrix)
         if 1 < dimension:
             for _ in range(repeat):
@@ -19,7 +19,7 @@ class RotationFunc:
         return matrix
 
     def rotation_right(self, matrix: list, repeat: int) -> list:
-        repeat: int = repeat if repeat < 4 else repeat - (repeat // 4) * 4
+        repeat: int = repeat if repeat < 4 else repeat - repeat // 4 * 4
         dimension: int = self.__get_dimension(matrix)
         if 1 < dimension:
             for _ in range(repeat):
